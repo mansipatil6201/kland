@@ -1,0 +1,24 @@
+<div class="login-wrapper" style="background: url('assets/images/login-background.png') no-repeat center center; background-size: cover;">
+    <div class="login-box">
+      <img src="assets/images/logo.png" alt="K-Land Logo" class="logo" />
+      <h2>ENTER YOUR EMAIL TO CONTINUE</h2>
+  
+      <form>
+        <input type="email" placeholder="example@email.com" name="email" [(ngModel)]="emailId" required />
+        <input type="password" placeholder="Password" name="password" [(ngModel)]="password" required />
+        
+        <p>{{loginMessage}}</p>
+        
+        <div class="forgot-password">
+          <a>Forgot password?</a>
+        </div>
+  
+        <button type="submit" (click)="validate()">Login</button>
+      </form>
+  
+      <p class="create-account">
+        Don't have an account? <a routerLink="/register">Create Account</a>
+      </p>
+    </div>
+  </div>
+  

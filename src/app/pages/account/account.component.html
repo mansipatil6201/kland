@@ -1,0 +1,61 @@
+<div class="account-wrapper">
+    <div class="header">
+      <img src="assets/images/logo.png" class="logo" routerLink="login" style="cursor: pointer;"/>
+      <h1>MY ACCOUNT</h1>
+      <p>Manage Your Fun: View Tickets, Book Zones, and Track Your Adventure!</p>
+    </div>
+  
+    <div class="profile-card">
+      <img src="assets/images/avatar1.png" class="avatar" />
+      <div class="user-info">
+        <h2>{{firstName}}&nbsp;{{lastName}}</h2>
+        <p>{{phoneCode}}-{{phone}}</p>
+        <p>{{emailId}}</p>
+      </div>
+    </div>
+  
+    <div class="content">
+      <aside class="sidebar">
+        <button>Edit Profile</button>
+        <button>FAQs</button>
+        <button>Contact Us</button>
+        <button class="danger">Delete Account</button>
+        <button class="logout">Logout</button>
+      </aside>
+  
+      <div class="form-container">
+        <h3>PERSONAL INFORMATION</h3>
+  
+        <form>
+          <div class="row">
+            <input type="text" placeholder="First Name"  [(ngModel)]="firstName" name="firstName" />
+            <input type="text" placeholder="Last Name"  [(ngModel)]="lastName" name="lastName"/>
+          </div>
+          <input type="email" placeholder="Email"  [(ngModel)]="emailId" name="emailId" />
+          <div class="row">
+            <select [(ngModel)]="phoneCode">
+              <option>965</option>
+              <option>91</option>
+            </select>
+            <input type="tel"  [(ngModel)]="phone" name="phone"/>
+          </div>
+          <input type="password" placeholder="Old Password" />
+          <input type="password" placeholder="New Password" />
+          <input type="password" placeholder="Confirm New Password" />
+          <button type="submit">Save</button>
+        </form>
+      </div>
+    </div>
+  
+    <footer>
+      <div class="links">
+        <a href="#">Press</a>
+        <a href="#">FAQs</a>
+        <a href="#">Contact us</a>
+        <a href="#">Join the team</a>
+        <a href="#">Terms & conditions</a>
+      </div>
+      <p>© 2024 K-Land. All Rights Reserved.</p>
+    </footer>
+  </div>
+  
